@@ -22,7 +22,7 @@ function App() {
 
   // updating like count
   const likeButton = (gallery) => {
-    axios.put(`/gallery/like/${gallery.id}`, {
+    axios.put(`gallery/like/${gallery.id}`, {
         likes: gallery.likes++
     })
     .then((response) => {
@@ -45,7 +45,7 @@ function App() {
       </header>
       <p>Gallery goes here</p>
       {/* <img src="images/goat_small.jpg" /> */}
-        <GalleryList galleryList={galleryList} />
+        <GalleryList likeButton={likeButton} galleryList={galleryList} />
     </div>
   );
 }

@@ -1,0 +1,20 @@
+img {
+    display: inline-block;
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
+
+.list {
+    display: inline-block;
+}
+
+.description {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.section {
+    display: inline-block;
+}

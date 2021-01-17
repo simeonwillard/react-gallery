@@ -1,6 +1,7 @@
 import './GalleryItem.css';
 import { useState } from 'react';
 
+
 function GalleryItem({ gallery, likeButton }) {
     const [readDescription, setReadDescription] = useState(false);
 
@@ -17,12 +18,24 @@ function GalleryItem({ gallery, likeButton }) {
     return (
         <>
             <section className="section">
-                <li className="list" onClick={handleClick}>{readDescription
-                    ? <p className="description">{gallery.description}</p>
-                    : <img src={gallery.path}></img>}</li>
+                <li className="list"
+                    onClick={handleClick}
+                >
+                    {readDescription
+                        ? <p className="description">{gallery.description}</p>
+                        : <img src={gallery.path}></img>}
+                </li>
 
-                <div><button onClick={thumbsUp}>Like </button>
-                    {gallery.likes ? <p>{gallery.likes} Likes!</p> : <p>No Likes</p>}</div>
+                <div>
+                    <button
+                        className="material-icons likeButton"
+                        onClick={thumbsUp}
+                    >
+                        thumb_up
+                    </button>
+
+                    {gallery.likes ? <p>Likes: {gallery.likes}</p> : <p>No Likes</p>}
+                </div>
             </section>
         </>
     )

@@ -1,7 +1,8 @@
 img {
+    
     display: inline-block;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 200px;
+    max-height: 200px;
     width: auto;
     height: auto;
     padding: 20px;
@@ -13,8 +14,19 @@ img {
 
 .description {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    top: 50%;
 }
 
 .section {
     display: inline-block;
+}
+
+.likeButton {
+    background-color: transparent;
+    color: blue;
+    border-color: blue;
+    border-radius: 5px;
 }
